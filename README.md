@@ -2,7 +2,7 @@
 
 Docker to build bitcoind (core) from source using Fedora. It pulls the latest production sources from github, compiles from source (including backward-compatible BerkeleyDB for old wallets) then copies executables to a new docker to minimize container/image size.
 
-You must be running at least Docker version 17.05 as this utilizes a multistage build. You could split the Dockerfile into two separate passes if you use an older version of Docker. 
+You must be running at least Docker version 17.05 to create the image as this utilizes a multistage build. You could split the Dockerfile into two separate passes if you use an older version of Docker and should be able to run the final image on any version of Docker.
 
 This Docker should run on a user-defined Docker network if you want to use any other bitcoin-related services (ElectrumX, EPS, etc) to allow inter-container communications.
 
