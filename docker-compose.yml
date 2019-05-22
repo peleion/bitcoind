@@ -1,0 +1,22 @@
+# docker-compose.yml for laptop.localdomain/bitcoind
+
+version: '2'
+services:
+  bitcoin:
+    image: <your image name>
+    container_name: bitcoind
+    ports:
+      - 8332:8332
+      - 8333:8333
+    volumes:
+      - data:/root/.bitcoin
+    restart: 
+      on-failure
+    networks:
+      - <your user-defined docker network name>
+volumes:
+  data:
+networks:
+  <your user-defined docker network name>:
+    external: true
+
