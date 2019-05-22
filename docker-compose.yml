@@ -1,4 +1,4 @@
-# docker-compose.yml for laptop.localdomain/bitcoind
+# docker-compose.yml for bitcoind
 
 version: '2'
 services:
