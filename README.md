@@ -1,6 +1,6 @@
 # bitcoind-docker
 
-Dockerfile and supporting files to build bitcoind (core) from source using Fedora. It pulls the latest production sources from github, compiles them (including backward-compatible BerkeleyDB for old wallets and ZMQ for future lightning node use) then copies executables to a new docker to minimize final container/image size.
+Dockerfile to build bitcoind (core) from source using Fedora. It pulls the latest production sources from GitHub, compiles them (including backward-compatible BerkeleyDB for old wallets and ZMQ for future lightning node use) then copies executables and supporting files to a new image to minimize final container/image size.
 
 You must be running at least Docker version 17.05 to create the image as this utilizes a multistage build. You could split the Dockerfile into two separate passes if you want to develop using an older version. The final container should be able to run on any version of Docker.
 
