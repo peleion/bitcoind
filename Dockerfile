@@ -29,8 +29,7 @@ RUN cd /build/bitcoin; \
     strip src/bitcoin-cli && cp src/bitcoin-cli ../files; \
     strip src/bitcoin-tx && cp src/bitcoin-tx ../files; \
     strip src/bitcoin-wallet && cp src/bitcoin-wallet ../files; \
-    cp share/rpcauth/rpcauth.py ../files; \
-    echo "datadir=/srv" >> share/examples/bitcoin.conf
+    cp share/rpcauth/rpcauth.py ../files
 
 FROM docker.io/fedora:30 
 
