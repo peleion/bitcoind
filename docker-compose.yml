@@ -2,7 +2,7 @@
 
 version: '2'
 services:
-  bitcoin:
+  bitcoind:
     image: <your image name>
     container_name: bitcoind
     ports:
