@@ -1,0 +1,22 @@
+# docker-compose.yml for bitcoind
+
+version: '2'
+services:
+  bitcoind:
+    image: <your container name>
+    container_name: bitcoind
+    ports:
+      - 8332:8332
+      - 8333:8333
+    volumes:
+      - data:/srv:z
+    restart: 
+      on-failure
+    networks:
+      - <your network name>
+volumes:
+  data:
+networks:
+  <your network name>:
+    external: true
+
