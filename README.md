@@ -6,13 +6,9 @@ You must be running at least Docker version 17.05 to create the image as this ut
 
 This container should utilize a user-defined Docker network if you want to use any other bitcoin-related services (ElectrumX, EPS, etc) to allow inter-container communications.
 
+This Docker creates a persistent volume to store blockchain data and config file. 
+
 A sample docker-compose is included - you will need to modify it.
-
-This Docker:
-
-1. Uses a persistent volume to store the bitcoin data relocated to /srv
-2. Moves bitcoin.conf to the persistent volume and adds the appropriate pointer to the persistent data. The sample bitcoin.conf included in GitHub source is used. Links are created on each startup to allow bitcoin-cli to function properly
-3. Calls bitcoind from a helper script to ensure #2 and #3 work properly
 
 ---
 TODO:
