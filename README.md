@@ -14,6 +14,7 @@ The Docker:
 
 A docker-compose is included - you will need to modify it.
 
+---
 TODO:
 
 Automated docker build on DockerHub
