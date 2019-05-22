@@ -1,0 +1,10 @@
+#!/bin/sh
+
+if [ ! -d "/srv/bitcoin.conf" ]; then
+  touch /srv/bitcoin.conf
+fi
+
+rm /root/.bitcoin/bitcoin.conf
+ln -s /srv/bitcoin.conf /root/.bitcoin/bitcoin.conf
+
+exec /usr/bin/bitcoind 
