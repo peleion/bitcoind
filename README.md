@@ -1,6 +1,6 @@
 # bitcoind-docker
 
-Docker to build bitcoind (core) from source using Fedora. It pulls the latest production sources from github, compiles from source then copies executables to a new docker to minimize container/image size.
+Docker to build bitcoind (core) from source using Fedora. It pulls the latest production sources from github, compiles from source (including backward-compatible BerkeleyDB for old wallets) then copies executables to a new docker to minimize container/image size.
 
 You must be running at least Docker version 17.05 as this utilizes a multistage build. You could split the Dockerfile into two separate passes if you use an older version of Docker. 
 
