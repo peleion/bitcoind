@@ -9,7 +9,7 @@ services:
       - 8332:8332
       - 8333:8333
     volumes:
-      - data:/srv:z
+      - data:/srv
     restart: 
       on-failure
     networks:
