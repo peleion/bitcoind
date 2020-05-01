@@ -55,6 +55,6 @@ COPY --from=bitcoind-dev /build/bitcoin/share/examples/bitcoin.conf /root/.bitco
                                                                                                                                                       
 VOLUME /root/.bitcoin                                                                                                                                 
                                                                                                                                                       
-EXPOSE 8333 8333                                                                                                                                      
+EXPOSE 8332 8333                                                                                                                                      
                                                                                                                                                       
 ENTRYPOINT ["bitcoind"]      
